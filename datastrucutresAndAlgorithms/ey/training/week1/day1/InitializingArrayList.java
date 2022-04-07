@@ -3,13 +3,24 @@ package datastrucutresAndAlgorithms.ey.training.week1.day1;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class InitializingArray {
+public class InitializingArrayList {
+
+	private void initializeArrayList() {
+		// initialize with default constructor, which initialize with capacity of 10
+		ArrayList<Integer> a = new ArrayList<Integer>();
+
+		//initialize with integer parameterized constructor,parameter defines capacity of the array
+		a = new ArrayList<Integer>(5);
+
+		//initialize with collection parameterized constructor,parameter defines any single parameters collections
+		a = new ArrayList<Integer>(new HashSet<Integer>());
+	}
+
 
 	public static void main(String[] args) {
-	
-		ArrayList<Integer> a = new ArrayList<Integer>(5);
-		
 
+
+		ArrayList<Integer> a = new ArrayList<Integer>(5);
 		a.add(1);
 		a.add(2);
 		a.add(1);
@@ -22,13 +33,13 @@ public class InitializingArray {
 		a.add(2);
 		a.add(1);
 		a.remove(10);
-		
-		
+
+
 		int[] s = {1,2,3,4,5};
-		
+
 		int g = 3;
-		
-		
+
+
 		/**
 		 * Calculate new capacity for AL
 		 * 
@@ -62,7 +73,7 @@ public class InitializingArray {
 		 * 2-2 =0 
 		 * 
 		 */
-		
+
 	}
 
 }

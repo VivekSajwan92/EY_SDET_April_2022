@@ -8,92 +8,73 @@ import org.junit.Test;
 public class ArrayListPackageUnderstanding {
 
 	public void arrayListmethods() {
-		ArrayList<Integer> al = new ArrayList<Integer>();
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		arrayList.add(10);
+		arrayList.add(10);
+
+		//printing the ArrayList which prints the values, which internally calls toString in 'AbstractCollection'
+		System.out.println(arrayList);
+
+		//indexOf - prints the index of the array, -1 if no index found
+		System.out.println(" Index of "+arrayList.indexOf(19));
+
+		//lastIndexOf - finds the last index of the array, -1 if no index found
+		System.out.println(" Last Index of "+arrayList.lastIndexOf(19));
+
+		//toArray - return Object array
+		System.out.println("TO Array" +Arrays.toString(arrayList.toArray()));
 
 
-		al.add(10);
-		al.add(10);
-		al.add(10);
-		al.add(19);
-		al.add(10);
-		al.add(10);
-		al.add(19);
+		ArrayList arrayList_1 = new ArrayList<Integer>();
 
-		System.out.println(al);
+		//add - add element in the end of the array list
+		arrayList_1.add(40);
 
+		//add - add element in the specific index of the array list
+		arrayList_1.add(0, 46);
 
-		System.out.println(" Index of "+al.indexOf(19));
+		//addAll - add all the collection at end of the current array list
+		arrayList.addAll(arrayList_1);
 
-		System.out.println(" Last Index of "+al.lastIndexOf(19));
+		//addAll - add all the collection at specific index of the current array list
+		arrayList.addAll(3,arrayList_1);
 
-		System.out.println("TO Array" +Arrays.toString(al.toArray()));
+		//remove - remove the value from the array
+		arrayList.remove(4);
 
+		// removeAll - remove all the element of the collection in the current array list 
+		arrayList.removeAll(arrayList_1);
 
-		//merger 2 collections
-		ArrayList al1 = new ArrayList<Integer>();
+		//set - reassign the value of the specific index
+		arrayList.set(6, 22);
 
-		al1.add(40);
-		al1.add(46);
+		//clone - clone the current array list to new instance
+		ArrayList al3 = (ArrayList) arrayList.clone();
 
-		al.addAll(al1);
+		//isEmpty() - return is the array list is empty
+		System.out.println(arrayList.isEmpty());
 
-		System.out.println(" Merger Al and AL1 "+al);
+		// contains - check if the element present in the array list
+		System.out.println("contains 19 "+arrayList.contains(19));
 
-		al.addAll(3,al1);
-
-		System.out.println(" Merger Al and AL1 "+al);
-
-		al.remove(4);
-
-		System.out.println("remove 4th index "+ al);
-
-		al.removeAll(al1);
-
-		System.out.println("remove al1 "+ al);
-
-		al.set(6, 22);
-
-		System.out.println("setting 19 to 22"+al);
-
-
-		ArrayList al3 = (ArrayList) al.clone();
-
-
-		System.out.println(al +" "+al3);
-
-		System.out.println(al.isEmpty());
-
-
-		System.out.println("contains 19 "+al.contains(19));
-
-		ArrayList al4 = al;
-		System.out.println(al4);
-
-		al.clear();
-
-		System.out.println(al+" "+al3);
-
-
-		System.out.println(al+" "+al4);
+		//clear - clear the entire array
+		arrayList.clear();
 	}
 
 	public void arrayListContainsOfObject() {
 
 		ArrayList<EmployeeClass> employees = new ArrayList<EmployeeClass>();
 
-
 		EmployeeClass kamal = new EmployeeClass("Kamal");
-		
+
 		employees.add(kamal);
-		
+
 		employees.add(new EmployeeClass("Muthu"));
-		
+
 		employees.add(new EmployeeClass("Sandhya"));
 
 		System.out.println(employees.contains(new EmployeeClass("Kamal")));
 		System.out.println(employees.contains(kamal));
-		
-
 	}
 
 

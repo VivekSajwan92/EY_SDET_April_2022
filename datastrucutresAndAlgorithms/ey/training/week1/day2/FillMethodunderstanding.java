@@ -2,7 +2,7 @@ package datastrucutresAndAlgorithms.ey.training.week1.day2;
 
 import java.util.Arrays;
 
-public class FillMethodunderstanding {
+public class FillMethodUnderstanding {
 	
 	public static void main(String[] args) {
 		

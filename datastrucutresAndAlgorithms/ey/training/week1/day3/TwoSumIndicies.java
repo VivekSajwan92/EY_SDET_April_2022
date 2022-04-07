@@ -74,17 +74,4 @@ public class TwoSumIndicies {
 
 		System.out.println(match);
 	}
-	
-	
-	
-	
-	
-	/*
-	 * 
-	 * 
-	 * Invalid data - 	{2,2,2,2,2,2} , target 4  // it will simplify the code by adding in set but that time and space complexity will get increased
-	 * 					{} target 2   // as it wont go inside loop
-	 * 
-	 */
-
 }
