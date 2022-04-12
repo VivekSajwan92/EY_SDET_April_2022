@@ -92,6 +92,8 @@ public class TimeComplexity {
 		
 	}
 	
+	//quadratic time complexity - look for sorting
+	
 	@Test
 	public void test() {
 		logTimeComplexity();
