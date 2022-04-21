@@ -40,7 +40,6 @@ public class ReverseString {
 
 		for(int i = input.length()-1; i > -1 ; i--) {
 			buff.append(input.charAt(i));
-			
 			System.out.println(VM.current().addressOf(buff));
 		}
 		return buff.toString();
