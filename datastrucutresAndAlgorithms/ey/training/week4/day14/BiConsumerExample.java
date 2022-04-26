@@ -1,4 +1,4 @@
-package datastrucutresAndAlgorithms.ey.training.week3.day14;
+package datastrucutresAndAlgorithms.ey.training.week4.day14;
 
 import java.util.function.BiConsumer;
 

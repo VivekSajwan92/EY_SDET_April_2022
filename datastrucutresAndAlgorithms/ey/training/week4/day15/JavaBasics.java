@@ -1,4 +1,4 @@
-package datastrucutresAndAlgorithms.ey.training.week3.day15;
+package datastrucutresAndAlgorithms.ey.training.week4.day15;
 
 public class JavaBasics {
 	
