@@ -126,7 +126,7 @@ public class SinglyLinkedList<T> {
 
 			while(tempNode != null) {
 				if(temp+1==index) {
-					 tempNode.next = new SinglyNode(value, tempNode.next);
+					tempNode.next = new SinglyNode(value, tempNode.next);
 					return;
 				}
 				tempNode = tempNode.next;
@@ -137,6 +137,8 @@ public class SinglyLinkedList<T> {
 
 
 	public String toString() {
+		if(size == 0) return "{}";
+		
 		StringBuilder builder = new StringBuilder();
 		builder.append("{");
 		SinglyNode tempNode = head;
@@ -151,6 +153,10 @@ public class SinglyLinkedList<T> {
 		builder.append("}");
 		return builder.toString();
 	}
+	
+	public int size() {
+		return size;
+	}
 
 
 
@@ -159,6 +165,35 @@ public class SinglyLinkedList<T> {
 
 		ll.add(1);
 
+	}
+
+
+
+	/*** Stack Implementation **/
+
+
+	public void push(T val) {
+		//		SinglyNode<T> node = new SinglyNode<T>(val);
+		//		 node.next = head;
+		//		 head = node;
+
+		head = new SinglyNode<T>(val,head);
+		size++;
+	}
+
+	public T pop() {
+		if(size == 0) throw new IndexOutOfBoundsException();
+		size--;
+		T temp = head.value;
+		head = head.next;
+		return temp;
+	}
+	
+	
+
+	public T peek() {
+		if(size == 0) throw new IndexOutOfBoundsException();
+		return head.value;
 	}
 
 }
