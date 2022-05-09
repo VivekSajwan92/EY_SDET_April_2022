@@ -157,6 +157,25 @@ public class SinglyLinkedList<T> {
 	public int size() {
 		return size;
 	}
+	
+	
+	//Queue implementation - FIFO
+	
+	
+	public void offer(T value) {
+		add(value);
+	}
+	
+	//poll == remove
+	public T poll() {
+		if(size == 0) throw new IndexOutOfBoundsException();
+		
+		T temp = head.value;
+		
+		head = head.next;
+		size--;
+		return temp;
+	}
 
 
 
