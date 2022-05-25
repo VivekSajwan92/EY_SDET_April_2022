@@ -15,10 +15,10 @@ public class Node<T> {
 	 * 
 	 */
 	
-	T value;
-	Node<T> next;
+	public T value;
+	public Node<T> next;
 	
-	Node(T val){
+	public Node(T val){
 		this.value = val;
 	}
 
