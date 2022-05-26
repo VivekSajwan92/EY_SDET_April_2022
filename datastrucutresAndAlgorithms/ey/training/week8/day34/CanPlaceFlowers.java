@@ -1,9 +1,24 @@
 package datastrucutresAndAlgorithms.ey.training.week8.day34;
 
+import org.junit.Test;
+
 public class CanPlaceFlowers {
 
 	//https://leetcode.com/problems/can-place-flowers/
 
+	/*
+	 * 
+	 * 1,0,0,0,1   n =1 
+	 * 
+	 * 1,0,1,0,1 -> true
+	 * 
+	 * 
+	 * 1,0,0,0,0,1 ;  n = 2
+	 * 
+	 * 1,0,0,0,0,1 ; n = 2 -> false
+	 * 
+	 * 0,0 
+	 */
 	public boolean canPlaceFlowers(int[] flowerbed, int n) {
 		if(flowerbed.length == 1){
 			if(flowerbed[0] == 0) n--;
@@ -27,5 +42,12 @@ public class CanPlaceFlowers {
 
 		return n<1;
 	}
+	
+	@Test
+	public void test() {
+		System.out.println(canPlaceFlowers(new int[] {1,0,0,0,0,0,1}, 2));
+	}
+	
+	
 
 }
