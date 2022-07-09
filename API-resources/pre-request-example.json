@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "738b44a0-c0b8-461a-a35d-bd1cadb0aa88",
+		"name": "onereq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21745860"
+	},
+	"item": [
+		{
+			"name": "getUsers",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var random = Math.floor(Math.random() * 10);",
+							"pm.variables.set('randomVal',random)",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/{{randomVal}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"{{randomVal}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
