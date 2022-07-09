@@ -1,0 +1,37 @@
+
+JIra, serviceNow Assessment
+
+Question:1
+
+API docmentation: https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/ 
+
+Create a collection- add the below requests, create diff variables as appropriate 
+
+1. create an issue in jira and verify the status code is as per specification
+2. store the key or Id of the issue in global variable and update the same, validate the status code
+3. get the issue and verify the updated summary
+4. Add an attachment and verify the file name from the response also the status code
+5. Delete an attachment by giving the Id of the attachment then validate the status code
+6. delete the same issue which has been created
+
+
+Question:2
+
+Service Now:- use oAuth / basic auth
+
+1. Create incident and validate the status code
+2. update the indcient and validate status code
+2. delete the same incident by getting the sysid from the response
+3. Run the above two requests using runner with 3 iterations
+
+Question:3
+
+1. Get all incidents
+2. delete the last incident
+3. delete the random incident 
+
+
+
+
+
+
