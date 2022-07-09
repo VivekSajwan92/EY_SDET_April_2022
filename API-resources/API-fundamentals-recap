@@ -1,0 +1,36 @@
+- API first approach
+- TDD
+- Mike cohns 
+- Contract driven 
+- HTTP methods / verbs - POST, PUT, PATCH, GET, DELETE, HEAD, OPTIONS, TRACE, TRACK
+- Status codes-
+	- 1xx
+	- 2xx--> 200-OK, 201-created, 204- no content
+	- 3xx--> redirectional 
+	- 4xx --> 400, 401, 402,403,404,409,415
+	- 5xx--> 500,501,502,503,504
+
+- auth types
+	- basic auth - base 64 encoding
+	- API keys - 
+	- Token -
+	- Oauth - JWT-json web token, bearer
+
+
+
+	APi gateway - AWS, IBM, Oracle
+
+	DDOS- 
+	Load balancer
+
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -H "Authorization: Bearer ACCESS-TOKEN" -XPOST "https://gorest.co.in/public/v2/users" -d '{"name":"Tenali Ramakrishna", "gender":"male", "email":"tenali.ramakrishna@15ce.com", "status":"active"}'
+
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -H "Authorization: Bearer 31270062a4adc492f10c78cb6dd985349194cb06b68f34f4c217c52e2760a3c6" -XPATCH "https://gorest.co.in/public/v2/users/4" -d '{"name":"Allasani Peddana", "email":"allasani.peddana@15ce.com", "status":"active"}'
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -H "Authorization: Bearer 31270062a4adc492f10c78cb6dd985349194cb06b68f34f4c217c52e2760a3c6" -XDELETE "https://gorest.co.in/public/v2/users/4"
+
+Global
+Environmental
+collection level
